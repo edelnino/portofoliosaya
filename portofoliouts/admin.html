@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">Edward<span>Portfolio</span></a>
+        <button class="menu-btn" data-menu-btn>Menu</button>
+        <nav class="menu" data-menu>
+          <a data-link href="index.html">Home</a>
+          <a data-link href="about.html">About</a>
+          <a data-link href="portfolio.html">Portfolio</a>
+          <a data-link href="services.html">Services</a>
+          <a data-link href="contact.html">Contact</a>
+          <a data-link href="admin.html">Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <h1 class="section-title">Dashboard Admin</h1>
+        <p class="section-subtitle">
+          Kelola profil, keterangan, dan portofolio langsung dari browser.
+        </p>
+
+        <section class="admin-panel">
+          <h2>Profil & Keterangan</h2>
+          <form data-admin-profile-form>
+            <label>
+              Nama lengkap
+              <input
+                type="text"
+                name="name"
+                placeholder="Edward Daniel"
+                required
+              />
+            </label>
+            <label>
+              Jabatan / Deskripsi singkat
+              <input
+                type="text"
+                name="subtitle"
+                placeholder="UI/UX Designer & Frontend Developer"
+                required
+              />
+            </label>
+            <label>
+              Judul hero (halaman utama)
+              <input
+                type="text"
+                name="heroTitle"
+                placeholder="Membangun website yang modern, cepat, dan fokus hasil."
+                required
+              />
+            </label>
+            <label>
+              Deskripsi hero
+              <textarea
+                name="heroDescription"
+                rows="3"
+                placeholder="Portofolio ini menampilkan proyek web..."
+                required
+              ></textarea>
+            </label>
+            <label>
+              Keterangan About
+              <textarea
+                name="aboutText"
+                rows="4"
+                placeholder="Fokus utama saya adalah frontend development..."
+                required
+              ></textarea>
+            </label>
+            <label>
+              Subtitle About
+              <input
+                type="text"
+                name="aboutSubtitle"
+                placeholder="Saya membantu brand dan bisnis..."
+                required
+              />
+            </label>
+            <label>
+              Foto profil
+              <input
+                type="file"
+                name="profilePhoto"
+                accept="image/*"
+                data-admin-profile-photo
+              />
+              <span class="photo-note"
+                >Unggah foto JPG/PNG/WEBP maksimal 2MB untuk preview
+                profil.</span
+              >
+              <img class="photo-preview" data-admin-profile-preview hidden />
+            </label>
+          </form>
+        </section>
+
+        <section class="admin-panel">
+          <div class="admin-header-row">
+            <h2>Portofolio Proyek</h2>
+            <button
+              class="btn btn-primary"
+              data-admin-add-project
+              type="button"
+            >
+              Tambah Proyek Baru
+            </button>
+          </div>
+          <div data-admin-projects class="project-list"></div>
+          <div class="project-form-panel" data-admin-new-project hidden>
+            <h3>Tambah / Edit Proyek</h3>
+            <form data-admin-project-form>
+              <input type="hidden" name="projectId" />
+              <label>
+                Judul proyek
+                <input type="text" name="title" required />
+              </label>
+              <label>
+                Kategori
+                <input
+                  type="text"
+                  name="category"
+                  placeholder="web / dashboard / branding"
+                  required
+                />
+              </label>
+              <label>
+                Deskripsi singkat
+                <textarea name="description" rows="3" required></textarea>
+              </label>
+              <label>
+                Link detail atau halaman eksternal
+                <input
+                  type="url"
+                  name="link"
+                  placeholder="project-educourse.html"
+                  required
+                />
+              </label>
+              <label>
+                Foto thumbnail proyek
+                <input
+                  type="file"
+                  name="projectPhoto"
+                  accept="image/*"
+                  data-admin-project-photo
+                />
+                <span class="photo-note"
+                  >Foto akan ditampilkan sebagai thumbnail di halaman
+                  portfolio.</span
+                >
+                <img class="photo-preview" data-admin-project-preview hidden />
+              </label>
+              <div class="project-form-actions">
+                <button class="btn btn-primary" type="submit">
+                  Simpan Proyek
+                </button>
+                <button
+                  class="btn btn-ghost"
+                  type="button"
+                  data-admin-cancel-project
+                >
+                  Kembali
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <div class="admin-actions">
+          <p class="photo-note">
+            Perubahan profil dan proyek disimpan otomatis. Tombol simpan bisa
+            digunakan sebagai konfirmasi tambahan.
+          </p>
+          <button class="btn btn-primary" data-admin-save type="button">
+            Simpan Semua Perubahan
+          </button>
+          <p class="feedback" data-admin-feedback></p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Edward Portfolio. | <a href="admin.html">Admin</a></p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

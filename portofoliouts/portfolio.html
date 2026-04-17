@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Works</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">Edward<span>Portfolio</span></a>
+        <button class="menu-btn" data-menu-btn>Menu</button>
+        <nav class="menu" data-menu>
+          <a data-link href="index.html">Home</a>
+          <a data-link href="about.html">About</a>
+          <a data-link href="portfolio.html">Portfolio</a>
+          <a data-link href="services.html">Services</a>
+          <a data-link href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container">
+        <h1 class="section-title">Portfolio Projects</h1>
+        <p class="section-subtitle">
+          Gunakan filter untuk melihat kategori proyek yang berbeda.
+        </p>
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="web">Website</button>
+          <button class="filter-btn" data-filter="dashboard">Dashboard</button>
+          <button class="filter-btn" data-filter="branding">Branding</button>
+        </div>
+        <div class="portfolio-grid" data-portfolio-grid></div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Edward Portfolio. | <a href="admin.html">Admin</a></p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
